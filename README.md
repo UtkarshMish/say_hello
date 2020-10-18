@@ -1,14 +1,15 @@
 # Info
 
-A Hello World PWA made using Svelte and Crow Microframework for C++.
+A Hello World PWA made using Svelte as Frontend <br>
+and Crow Microframework for C++ as backend.
 
 ## Rrequirements -
 
-1. Docker or Linux Environment
-   if Linux then libboost-all-dev and gcc installed
+1. Docker or Linux Environment.<br/>
+2. if Linux then libboost-all-dev and gcc installed.
 
 ### Steps to run -
 
-1.run `docker build -t {enter image name} `
-2.run `docker run -ti -p 8080:8080 {image name} `
+1.run `docker build -t {enter image name} .`<br />
+2.run `docker run -ti -p 8080:8080 {image name} `<br />
 Open browser and go on localhost port 8080

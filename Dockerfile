@@ -10,6 +10,7 @@ RUN apt-get -qq install build-essential libtcmalloc-minimal4 && \
 
 ADD . /app
 WORKDIR /app
-RUN mkdir build
 WORKDIR /app/build
-RUN cmake .. && make && ./say_hello
+RUN cmake ..
+RUN make
+CMD [ "./say_hello" ]
