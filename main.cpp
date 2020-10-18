@@ -20,6 +20,22 @@ void SendFile(response &res, string contentType, string filename)
   }
   res.end();
 }
+void sendJavaScript(response &res, string filename)
+{
+  SendFile(res, "text/javascript", "js/" + filename);
+}
+void sendHTML(response &res, string filename)
+{
+  SendFile(res, "text/html", filename + ".html");
+}
+void sendPNG(response &res, string filename)
+{
+  SendFile(res, "image/png", "image/" + filename);
+}
+void sendStyle(response &res, string filename)
+{
+  SendFile(res, "text/css", "style/" + filename);
+}
 
 int main(int argc, char *argv[])
 {
@@ -27,23 +43,27 @@ int main(int argc, char *argv[])
   crow::mustache::set_base("./public/");
   CROW_ROUTE(app, "/")
   ([](const request &req, response &res) {
-    SendFile(res, "text/html", "index.html");
+    sendHTML(res, "index");
   });
+
   CROW_ROUTE(app, "/<string>")
   ([](const request &req, response &res, string name = NULL) {
-    SendFile(res, "text/html", "index.html");
+    sendHTML(res, "index");
   });
+
   CROW_ROUTE(app, "/js/<string>")
   ([](const request &req, response &res, string filename) {
-    SendFile(res, "text/javascript", "js/" + filename);
+    sendJavaScript(res, filename);
   });
+
   CROW_ROUTE(app, "/image/<string>")
   ([](const request &req, response &res, string filename) {
-    SendFile(res, "image/png", "image/" + filename);
+    sendPNG(res, filename);
   });
+
   CROW_ROUTE(app, "/style/<string>")
   ([](const request &req, response &res, string filename) {
-    SendFile(res, "text/css", "style/" + filename);
+    sendStyle(res, filename);
   });
 
   char *port = getenv("PORT");

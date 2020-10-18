@@ -1,7 +1,9 @@
 # Info
 
-A Hello World PWA made using Svelte as Frontend <br>
-and Crow Microframework for C++ as backend.
+A Hello World PWA made using Svelte as Frontend
+and Crow Microframework for C++ as Backend.<br>
+
+Demo at: [say-hello.azurewebsites.net](https://say-hello.azurewebsites.net)
 
 ## Rrequirements -
 
@@ -10,6 +12,6 @@ and Crow Microframework for C++ as backend.
 
 ### Steps to run -
 
-1.run `docker build -t {enter image name} .`<br />
-2.run `docker run -ti -p 8080:8080 {image name} `<br />
+1.run `docker build -t {enter image name} . `<br />
+2.run `docker run -ti -p 8080:8080 -e PORT=8080 {image name} `<br />
 Open browser and go on localhost port 8080
