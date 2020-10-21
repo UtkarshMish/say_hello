@@ -3,7 +3,6 @@
 A Hello World PWA made using Svelte as Frontend
 and Crow Microframework for C++ as Backend.<br>
 
-Demo at: [say-hello.azurewebsites.net](https://say-hello.azurewebsites.net)
 
 ## Rrequirements -
 
