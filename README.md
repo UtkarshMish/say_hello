@@ -3,8 +3,7 @@
 A Hello World PWA made using Svelte as Frontend
 and Crow Microframework for C++ as Backend.<br>
 
-
-## Rrequirements -
+## Requirements -
 
 1. Docker or Linux Environment.<br/>
 2. if Linux then libboost-all-dev and gcc installed.
